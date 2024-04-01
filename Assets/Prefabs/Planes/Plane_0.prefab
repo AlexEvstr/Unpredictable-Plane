@@ -140,7 +140,7 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
@@ -160,6 +160,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameoverParticle: {fileID: 7436378456672417153, guid: 0a435e882ca3a42369604b286cd632b1, type: 3}
+  _starParticle: {fileID: 6315139104331629701, guid: 744da526e49134abe8b70deec35ccb9c, type: 3}
+  _gameoverPanel: {fileID: 7436378456672417153, guid: 0a435e882ca3a42369604b286cd632b1, type: 3}
 --- !u!1 &723590917285422476
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,7 +384,7 @@ GameObject:
   - component: {fileID: 164546898274620438}
   - component: {fileID: 7863592648495059152}
   m_Layer: 0
-  m_Name: plane_0
+  m_Name: plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
