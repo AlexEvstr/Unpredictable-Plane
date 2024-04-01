@@ -9,11 +9,13 @@ public class GameButtons : MonoBehaviour
     [SerializeField] private GameObject _pausePanel;
     [SerializeField] private TMP_Text _levelText;
     private int _currentLevel;
+    private int _maxLevel;
 
     private void Start()
     {
         Time.timeScale = 1;
         _currentLevel = PlayerPrefs.GetInt("currentLevel", 1);
+        _maxLevel = PlayerPrefs.GetInt("maxLevel", 1);
         _levelText.text = $"Level: {_currentLevel}";
     }
 
@@ -42,6 +44,11 @@ public class GameButtons : MonoBehaviour
     public void NextLevel()
     {
         _currentLevel++;
+        if (_currentLevel > _maxLevel)
+        {
+            _maxLevel = _currentLevel;
+        }
+        PlayerPrefs.SetInt("maxLevel", _maxLevel);
         PlayerPrefs.SetInt("currentLevel", _currentLevel);
         SceneManager.LoadScene("GameScene");
     }
