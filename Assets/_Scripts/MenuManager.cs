@@ -11,6 +11,7 @@ public class MenuManager : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1;
         AudioListener.volume = PlayerPrefs.GetFloat("music", 1);
         if (AudioListener.volume == 0)
         {
