@@ -7,7 +7,6 @@ public class SkinPanel : MonoBehaviour
 
     private void Start()
     {
-        //CheckPlane();
         int bestLevel = PlayerPrefs.GetInt("maxLevel", 1);
         if (int.Parse(gameObject.transform.GetChild(0).gameObject.name) <= bestLevel)
         {
@@ -37,7 +36,7 @@ public class SkinPanel : MonoBehaviour
 
     private void Update()
     {
-        if (transform.childCount == 2)
+        if (transform.childCount == 3)
         {
             gameObject.GetComponent<Image>().color = new Color(0.5f, 0.7f, 1, 1);
         }
@@ -45,11 +44,5 @@ public class SkinPanel : MonoBehaviour
         {
             gameObject.GetComponent<Image>().color = new Color(1, 1, 1, 1);
         }
-    }
-
-    private void CheckPlane()
-    {
-        int plane = PlayerPrefs.GetInt("skinPlane", 1);
-        if (int.Parse(transform.GetChild(0).name) == plane) _mark.transform.SetParent(transform, false);
     }
 }
