@@ -14,7 +14,7 @@ public class PlaneCollision : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Blade") || other.gameObject.CompareTag("Bomb"))
+        if (other.gameObject.CompareTag("Blade"))
         {
             Destroy(other.gameObject);
 
@@ -31,6 +31,15 @@ public class PlaneCollision : MonoBehaviour
             StarsCount.countOfStars++;
             if (StarsCount.countOfStars == 10)
             {
+                GameButtons.CurrentLevel++;
+                PlayerPrefs.SetInt("currentLevel", GameButtons.CurrentLevel);
+
+                if (GameButtons.CurrentLevel > GameButtons.MaxLevel)
+                {
+                    GameButtons.MaxLevel = GameButtons.CurrentLevel;
+                    PlayerPrefs.SetInt("maxLevel", GameButtons.MaxLevel);
+                }
+
                 gameObject.GetComponent<MeshCollider>().enabled = false;
 
                 GameObject winParticle = Instantiate(_winParticle);

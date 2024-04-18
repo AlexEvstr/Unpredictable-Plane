@@ -8,15 +8,15 @@ public class GameButtons : MonoBehaviour
 {
     [SerializeField] private GameObject _pausePanel;
     [SerializeField] private TMP_Text _levelText;
-    private int _currentLevel;
-    private int _maxLevel;
+    public static int CurrentLevel;
+    public static int MaxLevel;
 
     private void Start()
     {
         Time.timeScale = 1;
-        _currentLevel = PlayerPrefs.GetInt("currentLevel", 1);
-        _maxLevel = PlayerPrefs.GetInt("maxLevel", 1);
-        _levelText.text = $"Level: {_currentLevel}";
+        CurrentLevel = PlayerPrefs.GetInt("currentLevel", 1);
+        MaxLevel = PlayerPrefs.GetInt("maxLevel", 1);
+        _levelText.text = $"Level: {CurrentLevel}";
     }
 
     public void RestartGame()
@@ -39,17 +39,5 @@ public class GameButtons : MonoBehaviour
     {
         _pausePanel.SetActive(false);
         Time.timeScale = 1;
-    }
-
-    public void NextLevel()
-    {
-        _currentLevel++;
-        if (_currentLevel > _maxLevel)
-        {
-            _maxLevel = _currentLevel;
-        }
-        PlayerPrefs.SetInt("maxLevel", _maxLevel);
-        PlayerPrefs.SetInt("currentLevel", _currentLevel);
-        SceneManager.LoadScene("GameScene");
-    }
+    }    
 }

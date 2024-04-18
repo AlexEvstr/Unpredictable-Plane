@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObstacleMovement : MonoBehaviour
 {
-    private float _obstacleSpeed = 13.0f;
+    private float _obstacleSpeed = 25.0f;
 
     private void FixedUpdate()
     {

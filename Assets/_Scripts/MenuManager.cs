@@ -28,6 +28,7 @@ public class MenuManager : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene("GameScene");
+        PlayerPrefs.SetInt("currentLevel", PlayerPrefs.GetInt("maxLevel", 1));
     }
 
     public void OpenSkinsPanel()

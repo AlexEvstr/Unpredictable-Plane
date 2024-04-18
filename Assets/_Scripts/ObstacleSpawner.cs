@@ -17,8 +17,11 @@ public class ObstacleSpawner : MonoBehaviour
         {
             int randomxPosition = Random.Range(-12, 12);
             int randomIndex = Random.Range(0, _obstacles.Length);
+            if (randomIndex == 0) randomxPosition = 0;
+
             GameObject newObstacle = Instantiate(_obstacles[randomIndex]);
-            newObstacle.transform.position = new Vector3(randomxPosition, 0, 60);
+            newObstacle.transform.position = new Vector3(randomxPosition, 0, 120);
+
             yield return new WaitForSeconds(2f);
         }
     }

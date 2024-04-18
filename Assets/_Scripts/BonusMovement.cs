@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BonusMovement : MonoBehaviour
 {
-    private float _bonusSpeed = 5.0f;
+    private float _bonusSpeed = 10.0f;
 
     private void FixedUpdate()
     {
