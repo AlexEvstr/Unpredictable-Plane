@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.64146346, g: 0.5874556, b: 0.6978569, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1180,13 +1180,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 483951444}
     - target: {fileID: 2844178992732390823, guid: af9784b2969a541969d197a4af5fb603, type: 3}
+      propertyPath: _smokeTrail
+      value: 
+      objectReference: {fileID: 619874627}
+    - target: {fileID: 2844178992732390823, guid: af9784b2969a541969d197a4af5fb603, type: 3}
+      propertyPath: _winParticle
+      value: 
+      objectReference: {fileID: 2956085554429321727, guid: 99bf56a5b939044b2968d2fc02512f18, type: 3}
+    - target: {fileID: 2844178992732390823, guid: af9784b2969a541969d197a4af5fb603, type: 3}
       propertyPath: _starParticle
       value: 
-      objectReference: {fileID: 4037624388676732247, guid: 7188b3475f0e046508e3528ac363ba08, type: 3}
+      objectReference: {fileID: 1372050925603364261, guid: 3c9bbff91aa274e93b7670bff975e80b, type: 3}
     - target: {fileID: 2844178992732390823, guid: af9784b2969a541969d197a4af5fb603, type: 3}
       propertyPath: _gameoverPanel
       value: 
       objectReference: {fileID: 925400002}
+    - target: {fileID: 2844178992732390823, guid: af9784b2969a541969d197a4af5fb603, type: 3}
+      propertyPath: _gameoverParticle
+      value: 
+      objectReference: {fileID: 1164983178203219260, guid: 6ccd844fc88b64158be4b5933a5fa249, type: 3}
+    - target: {fileID: 2844178992732390823, guid: af9784b2969a541969d197a4af5fb603, type: 3}
+      propertyPath: _lastStarParticle
+      value: 
+      objectReference: {fileID: 4037624388676732247, guid: 7188b3475f0e046508e3528ac363ba08, type: 3}
     - target: {fileID: 7338872191708414639, guid: af9784b2969a541969d197a4af5fb603, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1196,25 +1212,57 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 483951444}
     - target: {fileID: 7585614957650755643, guid: af9784b2969a541969d197a4af5fb603, type: 3}
+      propertyPath: _smokeTrail
+      value: 
+      objectReference: {fileID: 619874627}
+    - target: {fileID: 7585614957650755643, guid: af9784b2969a541969d197a4af5fb603, type: 3}
+      propertyPath: _winParticle
+      value: 
+      objectReference: {fileID: 2956085554429321727, guid: 99bf56a5b939044b2968d2fc02512f18, type: 3}
+    - target: {fileID: 7585614957650755643, guid: af9784b2969a541969d197a4af5fb603, type: 3}
       propertyPath: _starParticle
       value: 
-      objectReference: {fileID: 4037624388676732247, guid: 7188b3475f0e046508e3528ac363ba08, type: 3}
+      objectReference: {fileID: 1372050925603364261, guid: 3c9bbff91aa274e93b7670bff975e80b, type: 3}
     - target: {fileID: 7585614957650755643, guid: af9784b2969a541969d197a4af5fb603, type: 3}
       propertyPath: _gameoverPanel
       value: 
       objectReference: {fileID: 925400002}
+    - target: {fileID: 7585614957650755643, guid: af9784b2969a541969d197a4af5fb603, type: 3}
+      propertyPath: _gameoverParticle
+      value: 
+      objectReference: {fileID: 1164983178203219260, guid: 6ccd844fc88b64158be4b5933a5fa249, type: 3}
+    - target: {fileID: 7585614957650755643, guid: af9784b2969a541969d197a4af5fb603, type: 3}
+      propertyPath: _lastStarParticle
+      value: 
+      objectReference: {fileID: 4037624388676732247, guid: 7188b3475f0e046508e3528ac363ba08, type: 3}
     - target: {fileID: 8035188467551850785, guid: af9784b2969a541969d197a4af5fb603, type: 3}
       propertyPath: _winPanel
       value: 
       objectReference: {fileID: 483951444}
     - target: {fileID: 8035188467551850785, guid: af9784b2969a541969d197a4af5fb603, type: 3}
+      propertyPath: _smokeTrail
+      value: 
+      objectReference: {fileID: 619874627}
+    - target: {fileID: 8035188467551850785, guid: af9784b2969a541969d197a4af5fb603, type: 3}
+      propertyPath: _winParticle
+      value: 
+      objectReference: {fileID: 2956085554429321727, guid: 99bf56a5b939044b2968d2fc02512f18, type: 3}
+    - target: {fileID: 8035188467551850785, guid: af9784b2969a541969d197a4af5fb603, type: 3}
       propertyPath: _starParticle
       value: 
-      objectReference: {fileID: 4037624388676732247, guid: 7188b3475f0e046508e3528ac363ba08, type: 3}
+      objectReference: {fileID: 1372050925603364261, guid: 3c9bbff91aa274e93b7670bff975e80b, type: 3}
     - target: {fileID: 8035188467551850785, guid: af9784b2969a541969d197a4af5fb603, type: 3}
       propertyPath: _gameoverPanel
       value: 
       objectReference: {fileID: 925400002}
+    - target: {fileID: 8035188467551850785, guid: af9784b2969a541969d197a4af5fb603, type: 3}
+      propertyPath: _gameoverParticle
+      value: 
+      objectReference: {fileID: 1164983178203219260, guid: 6ccd844fc88b64158be4b5933a5fa249, type: 3}
+    - target: {fileID: 8035188467551850785, guid: af9784b2969a541969d197a4af5fb603, type: 3}
+      propertyPath: _lastStarParticle
+      value: 
+      objectReference: {fileID: 4037624388676732247, guid: 7188b3475f0e046508e3528ac363ba08, type: 3}
     - target: {fileID: 8397343323916933033, guid: af9784b2969a541969d197a4af5fb603, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1228,18 +1276,39 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 483951444}
     - target: {fileID: 9137859682996894123, guid: af9784b2969a541969d197a4af5fb603, type: 3}
+      propertyPath: _smokeTrail
+      value: 
+      objectReference: {fileID: 619874627}
+    - target: {fileID: 9137859682996894123, guid: af9784b2969a541969d197a4af5fb603, type: 3}
+      propertyPath: _winParticle
+      value: 
+      objectReference: {fileID: 2956085554429321727, guid: 99bf56a5b939044b2968d2fc02512f18, type: 3}
+    - target: {fileID: 9137859682996894123, guid: af9784b2969a541969d197a4af5fb603, type: 3}
       propertyPath: _starParticle
       value: 
-      objectReference: {fileID: 4037624388676732247, guid: 7188b3475f0e046508e3528ac363ba08, type: 3}
+      objectReference: {fileID: 1372050925603364261, guid: 3c9bbff91aa274e93b7670bff975e80b, type: 3}
     - target: {fileID: 9137859682996894123, guid: af9784b2969a541969d197a4af5fb603, type: 3}
       propertyPath: _gameoverPanel
       value: 
       objectReference: {fileID: 925400002}
+    - target: {fileID: 9137859682996894123, guid: af9784b2969a541969d197a4af5fb603, type: 3}
+      propertyPath: _gameoverParticle
+      value: 
+      objectReference: {fileID: 1164983178203219260, guid: 6ccd844fc88b64158be4b5933a5fa249, type: 3}
+    - target: {fileID: 9137859682996894123, guid: af9784b2969a541969d197a4af5fb603, type: 3}
+      propertyPath: _lastStarParticle
+      value: 
+      objectReference: {fileID: 4037624388676732247, guid: 7188b3475f0e046508e3528ac363ba08, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af9784b2969a541969d197a4af5fb603, type: 3}
+--- !u!1 &619874627 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4422564911078226060, guid: af9784b2969a541969d197a4af5fb603, type: 3}
+  m_PrefabInstance: {fileID: 619874626}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
