@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlaneSkin : MonoBehaviour
 {
-    [SerializeField] private Material[] _materials;
+    [SerializeField] private GameObject[] _planes;
 
     private void Start()
     {
-        int materialIndex = PlayerPrefs.GetInt("skinPlane", 0);
-        gameObject.GetComponent<MeshRenderer>().material = _materials[materialIndex];
+        int planeIndex = PlayerPrefs.GetInt("skinPlane", 0);
+        _planes[planeIndex].SetActive(true);
     }
 }
