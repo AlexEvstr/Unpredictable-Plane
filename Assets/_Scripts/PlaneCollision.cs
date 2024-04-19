@@ -13,10 +13,19 @@ public class PlaneCollision : MonoBehaviour
     [SerializeField] private GameObject _winPanel;
     [SerializeField] private GameObject _smokeTrail;
 
+    [SerializeField] private SoundControllerGame soundControllerGame;
+
+    private void Start()
+    {
+        soundControllerGame.PlaneSoundOn();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Blade"))
         {
+            soundControllerGame.PlaneSoundOff();
+            soundControllerGame.ExplosionSound();
             Destroy(other.gameObject);
             if (GameButtons.Vibro == 1) Vibration.Vibrate();
 
@@ -31,10 +40,13 @@ public class PlaneCollision : MonoBehaviour
         else if (other.gameObject.CompareTag("Star"))
         {
             StarsCount.countOfStars++;
-            
+            soundControllerGame.PickGemSound();
+
+
             if (StarsCount.countOfStars == 2)
             {
                 if (GameButtons.Vibro == 1) Vibration.Vibrate();
+                soundControllerGame.PlaneSoundOff();
                 GameButtons.CurrentLevel++;
                 PlayerPrefs.SetInt("currentLevel", GameButtons.CurrentLevel);
 
@@ -78,6 +90,7 @@ public class PlaneCollision : MonoBehaviour
     {
         yield return new WaitForSeconds(0.8f);
         _gameoverPanel.SetActive(true);
+        soundControllerGame.GameOverSound();
         Time.timeScale = 0;
     }
 
@@ -85,32 +98,38 @@ public class PlaneCollision : MonoBehaviour
     {
         yield return new WaitForSeconds(0.25f);
         if (GameButtons.Vibro == 1) Vibration.VibratePop();
+        soundControllerGame.SalutSound();
         GameObject winParticle_1 = Instantiate(_winParticle);
         winParticle_1.transform.position = new Vector3(0, 7, 0);
         Destroy(winParticle_1, 1f);
         yield return new WaitForSeconds(0.1f);
         if (GameButtons.Vibro == 1) Vibration.VibratePop();
+        soundControllerGame.SalutSound();
         GameObject winParticle_2 = Instantiate(_winParticle);
         winParticle_2.transform.position = new Vector3(-8, 7, 0);
         Destroy(winParticle_2, 1f);
         yield return new WaitForSeconds(0.1f);
         if (GameButtons.Vibro == 1) Vibration.VibratePop();
+        soundControllerGame.SalutSound();
         GameObject winParticle_3 = Instantiate(_winParticle);
         winParticle_3.transform.position = new Vector3(8, 7, 0);
         Destroy(winParticle_3, 1f);
         yield return new WaitForSeconds(0.25f);
         if (GameButtons.Vibro == 1) Vibration.VibratePop();
+        soundControllerGame.SalutSound();
         GameObject winParticle_4 = Instantiate(_winParticle);
         winParticle_4.transform.position = new Vector3(-4, 7, 0);
         Destroy(winParticle_4, 1f);
         yield return new WaitForSeconds(0.25f);
         if (GameButtons.Vibro == 1) Vibration.VibratePop();
+        soundControllerGame.SalutSound();
         GameObject winParticle_5 = Instantiate(_winParticle);
         winParticle_5.transform.position = new Vector3(4, 7, 0);
         Destroy(winParticle_5, 1f);
 
         yield return new WaitForSeconds(1f);
         _winPanel.SetActive(true);
+        soundControllerGame.WinSound();
         Time.timeScale = 0;
     }
 }

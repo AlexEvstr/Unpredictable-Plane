@@ -672,6 +672,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 463856437}
+        m_TargetAssemblyTypeName: SoundControllerGame, Assembly-CSharp
+        m_MethodName: ClickButtonSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &453846844
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -751,6 +763,8 @@ GameObject:
   - component: {fileID: 463856434}
   - component: {fileID: 463856435}
   - component: {fileID: 463856436}
+  - component: {fileID: 463856437}
+  - component: {fileID: 463856438}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -845,6 +859,121 @@ MonoBehaviour:
   - {fileID: 619874630}
   - {fileID: 619874629}
   - {fileID: 619874628}
+--- !u!114 &463856437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463856430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4240f75754cbf4dbb92ca084e20686d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clickSound: {fileID: 8300000, guid: 5f994f53d8e8f423c97e108c96c7bbb6, type: 3}
+  _explosionSound: {fileID: 8300000, guid: 68e94c61e58fa439da75f24b66264e52, type: 3}
+  _gameOverSound: {fileID: 8300000, guid: 909792c706b4047a69e10cec05306571, type: 3}
+  _pickGemSound: {fileID: 8300000, guid: 030b1182c8b3b42e18e7e231ca2ca697, type: 3}
+  _plane: {fileID: 8300000, guid: 985c498df5439462b8b944de2c6f9d15, type: 3}
+  _salutSound: {fileID: 8300000, guid: 3e7cdf427170048c7827be0aae601730, type: 3}
+  _winSound: {fileID: 8300000, guid: 336582129600d49c8aa2b5836e7fb5a5, type: 3}
+--- !u!82 &463856438
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463856430}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &474591306
 GameObject:
   m_ObjectHideFlags: 0
@@ -1297,6 +1426,10 @@ PrefabInstance:
       propertyPath: _lastStarParticle
       value: 
       objectReference: {fileID: 4037624388676732247, guid: 7188b3475f0e046508e3528ac363ba08, type: 3}
+    - target: {fileID: 2844178992732390823, guid: af9784b2969a541969d197a4af5fb603, type: 3}
+      propertyPath: soundControllerGame
+      value: 
+      objectReference: {fileID: 463856437}
     - target: {fileID: 3530521423750639737, guid: af9784b2969a541969d197a4af5fb603, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -1357,6 +1490,10 @@ PrefabInstance:
       propertyPath: _lastStarParticle
       value: 
       objectReference: {fileID: 4037624388676732247, guid: 7188b3475f0e046508e3528ac363ba08, type: 3}
+    - target: {fileID: 7585614957650755643, guid: af9784b2969a541969d197a4af5fb603, type: 3}
+      propertyPath: soundControllerGame
+      value: 
+      objectReference: {fileID: 463856437}
     - target: {fileID: 7796919746744002098, guid: af9784b2969a541969d197a4af5fb603, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -1401,6 +1538,10 @@ PrefabInstance:
       propertyPath: _lastStarParticle
       value: 
       objectReference: {fileID: 4037624388676732247, guid: 7188b3475f0e046508e3528ac363ba08, type: 3}
+    - target: {fileID: 8035188467551850785, guid: af9784b2969a541969d197a4af5fb603, type: 3}
+      propertyPath: soundControllerGame
+      value: 
+      objectReference: {fileID: 463856437}
     - target: {fileID: 8397343323916933033, guid: af9784b2969a541969d197a4af5fb603, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1453,6 +1594,10 @@ PrefabInstance:
       propertyPath: _lastStarParticle
       value: 
       objectReference: {fileID: 4037624388676732247, guid: 7188b3475f0e046508e3528ac363ba08, type: 3}
+    - target: {fileID: 9137859682996894123, guid: af9784b2969a541969d197a4af5fb603, type: 3}
+      propertyPath: soundControllerGame
+      value: 
+      objectReference: {fileID: 463856437}
     - target: {fileID: 9202047008924425603, guid: af9784b2969a541969d197a4af5fb603, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -2315,6 +2460,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 463856437}
+        m_TargetAssemblyTypeName: SoundControllerGame, Assembly-CSharp
+        m_MethodName: ClickButtonSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1124828076
 GameObject:
   m_ObjectHideFlags: 0
@@ -2480,6 +2637,18 @@ MonoBehaviour:
       - m_Target: {fileID: 463856434}
         m_TargetAssemblyTypeName: GameButtons, Assembly-CSharp
         m_MethodName: MenuScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 463856437}
+        m_TargetAssemblyTypeName: SoundControllerGame, Assembly-CSharp
+        m_MethodName: ClickButtonSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2659,6 +2828,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 463856437}
+        m_TargetAssemblyTypeName: SoundControllerGame, Assembly-CSharp
+        m_MethodName: ClickButtonSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1204625955
 GameObject:
   m_ObjectHideFlags: 0
@@ -2783,6 +2964,18 @@ MonoBehaviour:
       - m_Target: {fileID: 463856434}
         m_TargetAssemblyTypeName: GameButtons, Assembly-CSharp
         m_MethodName: MenuScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 463856437}
+        m_TargetAssemblyTypeName: SoundControllerGame, Assembly-CSharp
+        m_MethodName: ClickButtonSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3848,6 +4041,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 463856437}
+        m_TargetAssemblyTypeName: SoundControllerGame, Assembly-CSharp
+        m_MethodName: ClickButtonSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1764037758
 GameObject:
   m_ObjectHideFlags: 0
@@ -3981,6 +4186,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 463856437}
+        m_TargetAssemblyTypeName: SoundControllerGame, Assembly-CSharp
+        m_MethodName: ClickButtonSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1900484884
 GameObject:
   m_ObjectHideFlags: 0
@@ -4067,6 +4284,18 @@ MonoBehaviour:
       - m_Target: {fileID: 463856434}
         m_TargetAssemblyTypeName: GameButtons, Assembly-CSharp
         m_MethodName: RestartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 463856437}
+        m_TargetAssemblyTypeName: SoundControllerGame, Assembly-CSharp
+        m_MethodName: ClickButtonSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

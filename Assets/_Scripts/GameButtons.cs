@@ -11,10 +11,12 @@ public class GameButtons : MonoBehaviour
     public static int CurrentLevel;
     public static int MaxLevel;
     public static int Vibro;
+    private SoundControllerGame soundControllerGame;
 
     private void Start()
     {
         Time.timeScale = 1;
+        soundControllerGame = GetComponent<SoundControllerGame>();
         Vibration.Init();
         Vibro = PlayerPrefs.GetInt("vibro", 1);
         CurrentLevel = PlayerPrefs.GetInt("currentLevel", 1);
@@ -38,6 +40,7 @@ public class GameButtons : MonoBehaviour
     {
         if (Vibro == 1) Vibration.VibratePop();
         _pausePanel.SetActive(true);
+        soundControllerGame.PlaneSoundOff();
         Time.timeScale = 0;
     }
 
@@ -45,6 +48,7 @@ public class GameButtons : MonoBehaviour
     {
         if (Vibro == 1) Vibration.VibratePop();
         _pausePanel.SetActive(false);
+        soundControllerGame.PlaneSoundOn();
         Time.timeScale = 1;
     }    
 }
