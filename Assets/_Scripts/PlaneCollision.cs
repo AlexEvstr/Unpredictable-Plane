@@ -18,6 +18,7 @@ public class PlaneCollision : MonoBehaviour
         if (other.gameObject.CompareTag("Blade"))
         {
             Destroy(other.gameObject);
+            if (GameButtons.Vibro == 1) Vibration.Vibrate();
 
             GameObject gameoverParticle = Instantiate(_gameoverParticle);
             gameoverParticle.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
@@ -30,8 +31,10 @@ public class PlaneCollision : MonoBehaviour
         else if (other.gameObject.CompareTag("Star"))
         {
             StarsCount.countOfStars++;
+            
             if (StarsCount.countOfStars == 2)
             {
+                if (GameButtons.Vibro == 1) Vibration.Vibrate();
                 GameButtons.CurrentLevel++;
                 PlayerPrefs.SetInt("currentLevel", GameButtons.CurrentLevel);
 
@@ -51,6 +54,7 @@ public class PlaneCollision : MonoBehaviour
             }
             else
             {
+                if (GameButtons.Vibro == 1) Vibration.VibratePeek();
                 GameObject starParticle = Instantiate(_starParticle);
                 starParticle.transform.position = new Vector3(other.gameObject.transform.position.x, other.gameObject.transform.position.y, other.gameObject.transform.position.z);
                 Destroy(starParticle, 1f);
@@ -80,22 +84,27 @@ public class PlaneCollision : MonoBehaviour
     private IEnumerator ShowWinPanel()
     {
         yield return new WaitForSeconds(0.25f);
+        if (GameButtons.Vibro == 1) Vibration.VibratePop();
         GameObject winParticle_1 = Instantiate(_winParticle);
         winParticle_1.transform.position = new Vector3(0, 7, 0);
         Destroy(winParticle_1, 1f);
         yield return new WaitForSeconds(0.1f);
+        if (GameButtons.Vibro == 1) Vibration.VibratePop();
         GameObject winParticle_2 = Instantiate(_winParticle);
         winParticle_2.transform.position = new Vector3(-8, 7, 0);
         Destroy(winParticle_2, 1f);
         yield return new WaitForSeconds(0.1f);
+        if (GameButtons.Vibro == 1) Vibration.VibratePop();
         GameObject winParticle_3 = Instantiate(_winParticle);
         winParticle_3.transform.position = new Vector3(8, 7, 0);
         Destroy(winParticle_3, 1f);
         yield return new WaitForSeconds(0.25f);
+        if (GameButtons.Vibro == 1) Vibration.VibratePop();
         GameObject winParticle_4 = Instantiate(_winParticle);
         winParticle_4.transform.position = new Vector3(-4, 7, 0);
         Destroy(winParticle_4, 1f);
         yield return new WaitForSeconds(0.25f);
+        if (GameButtons.Vibro == 1) Vibration.VibratePop();
         GameObject winParticle_5 = Instantiate(_winParticle);
         winParticle_5.transform.position = new Vector3(4, 7, 0);
         Destroy(winParticle_5, 1f);

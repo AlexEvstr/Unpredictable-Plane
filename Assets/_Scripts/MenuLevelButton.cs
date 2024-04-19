@@ -22,6 +22,7 @@ public class MenuLevelButton : MonoBehaviour
 
     public void ClickOnLevel()
     {
+        if (MenuManager.Vibrate == 1) Vibration.VibratePop();
         int index = int.Parse(gameObject.name);
         PlayerPrefs.SetInt("currentLevel", index);
         SceneManager.LoadScene("GameScene");

@@ -30,19 +30,8 @@ public class SkinPanel : MonoBehaviour
 
     public void SkinButton()
     {
+        if (MenuManager.Vibrate == 1) Vibration.VibratePop();
         _mark.transform.SetParent(transform, false);
         PlayerPrefs.SetInt("skinPlane", int.Parse(gameObject.name));
     }
-
-    //private void Update()
-    //{
-    //    if (transform.childCount == 3)
-    //    {
-    //        gameObject.GetComponent<Image>().color = new Color(0.5f, 0.7f, 1, 1);
-    //    }
-    //    else
-    //    {
-    //        gameObject.GetComponent<Image>().color = new Color(1, 1, 1, 1);
-    //    }
-    //}
 }
