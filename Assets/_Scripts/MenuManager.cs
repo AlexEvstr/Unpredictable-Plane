@@ -11,6 +11,7 @@ public class MenuManager : MonoBehaviour
 
     [SerializeField] private GameObject _onVibroIcon;
     [SerializeField] private GameObject _offVibroIcon;
+    [SerializeField] private GameObject _tutorial;
 
     public static int Vibrate;
 
@@ -96,5 +97,17 @@ public class MenuManager : MonoBehaviour
         _offVibroIcon.SetActive(false);
         Vibrate = 1;
         PlayerPrefs.SetFloat("vibro", Vibrate);
+    }
+
+    public void OpenTutorial()
+    {
+        if (Vibrate == 1) Vibration.VibratePop();
+        _tutorial.SetActive(true);
+    }
+
+    public void CloseTutorial()
+    {
+        if (Vibrate == 1) Vibration.VibratePop();
+        _tutorial.SetActive(false);
     }
 }

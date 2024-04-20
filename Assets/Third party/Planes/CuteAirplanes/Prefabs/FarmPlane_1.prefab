@@ -94,8 +94,6 @@ GameObject:
   - component: {fileID: 6422948295144030131}
   - component: {fileID: 5994483577496610298}
   - component: {fileID: 4311857311375980387}
-  - component: {fileID: 3715515765755507530}
-  - component: {fileID: 9137859682996894123}
   m_Layer: 0
   m_Name: farmPlane
   m_TagString: Untagged
@@ -170,46 +168,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3715515765755507530
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7735232125907165617}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1617650830149014058, guid: 7ee8c5692abe81b4db5320302862d3d5, type: 3}
---- !u!114 &9137859682996894123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7735232125907165617}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ca370611ccb84ae595aaa1fe0db121d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _gameoverParticle: {fileID: 7436378456672417153, guid: 0a435e882ca3a42369604b286cd632b1, type: 3}
-  _starParticle: {fileID: 6315139104331629701, guid: 744da526e49134abe8b70deec35ccb9c, type: 3}
-  _winParticle: {fileID: 1534218052705004674, guid: 2b1eaea07dc3549a48ff3a7beab2a90a, type: 3}
-  _lastStarParticle: {fileID: 1641774738821729116, guid: 9e7a98f1df1834009bc8a8fb9ab1c4d3, type: 3}
-  _gameoverPanel: {fileID: 0}
-  _winPanel: {fileID: 0}
 --- !u!1 &8589707282462370760
 GameObject:
   m_ObjectHideFlags: 0

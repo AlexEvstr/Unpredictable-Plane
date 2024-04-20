@@ -40,13 +40,13 @@ public class PlaneCollision : MonoBehaviour
         else if (other.gameObject.CompareTag("Star"))
         {
             StarsCount.countOfStars++;
-            soundControllerGame.PickGemSound();
 
 
-            if (StarsCount.countOfStars == 2)
+            if (StarsCount.countOfStars == 10)
             {
                 if (GameButtons.Vibro == 1) Vibration.Vibrate();
                 soundControllerGame.PlaneSoundOff();
+                soundControllerGame.PickGemSound();
                 GameButtons.CurrentLevel++;
                 PlayerPrefs.SetInt("currentLevel", GameButtons.CurrentLevel);
 
@@ -66,6 +66,7 @@ public class PlaneCollision : MonoBehaviour
             }
             else
             {
+                soundControllerGame.PickGemSound();
                 if (GameButtons.Vibro == 1) Vibration.VibratePeek();
                 GameObject starParticle = Instantiate(_starParticle);
                 starParticle.transform.position = new Vector3(other.gameObject.transform.position.x, other.gameObject.transform.position.y, other.gameObject.transform.position.z);

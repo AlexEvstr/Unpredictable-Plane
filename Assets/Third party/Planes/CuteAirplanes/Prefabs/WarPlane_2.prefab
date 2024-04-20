@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 9096385386191593698}
   - component: {fileID: 8828078110690656660}
   - component: {fileID: 2707479366916805218}
-  - component: {fileID: 4454714400116572358}
-  - component: {fileID: 7585614957650755643}
   m_Layer: 0
   m_Name: warPlane_2
   m_TagString: Untagged
@@ -87,46 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &4454714400116572358
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 902417265546699242}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 404574095988059351, guid: 99d6dd8c477b85c4a85150699a6c317c, type: 3}
---- !u!114 &7585614957650755643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 902417265546699242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ca370611ccb84ae595aaa1fe0db121d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _gameoverParticle: {fileID: 7436378456672417153, guid: 0a435e882ca3a42369604b286cd632b1, type: 3}
-  _starParticle: {fileID: 6315139104331629701, guid: 744da526e49134abe8b70deec35ccb9c, type: 3}
-  _winParticle: {fileID: 1534218052705004674, guid: 2b1eaea07dc3549a48ff3a7beab2a90a, type: 3}
-  _lastStarParticle: {fileID: 1641774738821729116, guid: 9e7a98f1df1834009bc8a8fb9ab1c4d3, type: 3}
-  _gameoverPanel: {fileID: 0}
-  _winPanel: {fileID: 0}
 --- !u!1 &3251080639290661445
 GameObject:
   m_ObjectHideFlags: 0
