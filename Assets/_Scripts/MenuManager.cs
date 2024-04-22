@@ -18,6 +18,7 @@ public class MenuManager : MonoBehaviour
     private void Start()
     {
         Time.timeScale = 1;
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
         Vibration.Init();
         Vibrate = PlayerPrefs.GetInt("vibro", 1);
         AudioListener.volume = PlayerPrefs.GetFloat("music", 1);

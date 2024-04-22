@@ -16,6 +16,7 @@ public class GameButtons : MonoBehaviour
     private void Start()
     {
         Time.timeScale = 1;
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
         soundControllerGame = GetComponent<SoundControllerGame>();
         Vibration.Init();
         Vibro = PlayerPrefs.GetInt("vibro", 1);
